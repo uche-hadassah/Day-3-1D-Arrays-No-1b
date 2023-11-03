@@ -31,7 +31,7 @@ int main()
 				i++;//
 			}
 			Size = i;
-	} while (num != -1);
+	} while (i < MAX);
 	cout << "The copied array is:";
 	for (int j = 0; j < Size; j++)//Output the copied array
 	{
