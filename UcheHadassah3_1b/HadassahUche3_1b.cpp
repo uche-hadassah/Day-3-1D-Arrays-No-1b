@@ -28,6 +28,7 @@ int main()
 			{
 				Original[i] = num;//The number is registered in the original array
 				Copy[i] = Original[i];//Its equivalent is registered in the copy
+				i++;//
 			}
 			Size = i;
 	} while (num != -1);
