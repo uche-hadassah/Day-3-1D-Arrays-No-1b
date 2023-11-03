@@ -9,7 +9,6 @@ int main()
 	int Copy[MAX];
 	int num;
 	int i = 0;
-	int Size;
 	cout << "Enter positive numbers(-1 to end):";
 	
 	do
@@ -30,10 +29,9 @@ int main()
 				Copy[i] = Original[i];//Its equivalent is registered in the copy
 				i++;//
 			}
-			Size = i;
 	} while (i < MAX);
 	cout << "The copied array is:";
-	for (int j = 0; j < Size; j++)//Output the copied array
+	for (int j = 0; j < i; j++)//Output the copied array
 	{
 		cout << Copy[j] << " ";
 	}
