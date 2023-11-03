@@ -1,6 +1,5 @@
-/*b) Modify the program in (a) above so that it reads a sequence of positive numbers 
-from the user (-1 to signal end of input) and copies it in another array. The 
-program should output the copied array.*/#include<iostream>
+/*Name: Uche Hadassah
+This program reads a sequence of positive numbers from the user, copies it into another array and ouputs the copied array*/#include<iostream>
 using namespace std;
 int main()
 {
@@ -10,7 +9,6 @@ int main()
 	int num;
 	int i = 0;
 	cout << "Enter positive numbers(-1 to end):";
-	
 	do
 	{
 		cin >> num;
@@ -19,7 +17,7 @@ int main()
 				cout << "Invalid! Please enter a POSITIVE number:";
 				cin >> num;
 			}
-			if (num == -1)
+			if (num == -1)//Activates the sentinel value
 			{
 				break;
 			}
@@ -27,7 +25,7 @@ int main()
 			{
 				Original[i] = num;//The number is registered in the original array
 				Copy[i] = Original[i];//Its equivalent is registered in the copy
-				i++;//
+				i++;//increments i so i can use it when outputting th ecopied array
 			}
 	} while (i < MAX);
 	cout << "The copied array is:";
