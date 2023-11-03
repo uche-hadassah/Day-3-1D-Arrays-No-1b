@@ -4,24 +4,35 @@ program should output the copied array.*/#include<iostream>
 using namespace std;
 int main()
 {
-	int Original[10];
-	int Copy[10];
+	const int MAX = 100;
+	int Original[MAX];
+	int Copy[MAX];
 	int num;
-	cout << "Enter 10 positive numbers:";
-	for (int i = 0; i < 10; i++)
+	int i = 0;
+	int Size;
+	cout << "Enter positive numbers(-1 to end):";
+	
+	do
 	{
-		int num;
-		cin >> num;//Receives the numbers from the user
-		while (num < 0)//Does tthis as long as num < -1
-		{
-			cout << "Invalid! Please enter a POSITIVE number:";
-			cin >> num;
-		}
-		Original[i] = num;//The number is registered in the original array
-		Copy[i] = Original[i];//Its equivalent is registered in the copy
-	}
+		cin >> num;
+			while (num < -1)//Does this as long as num < -1
+			{
+				cout << "Invalid! Please enter a POSITIVE number:";
+				cin >> num;
+			}
+			if (num == -1)
+			{
+				break;
+			}
+			else
+			{
+				Original[i] = num;//The number is registered in the original array
+				Copy[i] = Original[i];//Its equivalent is registered in the copy
+			}
+			Size = i;
+	} while (num != -1);
 	cout << "The copied array is:";
-	for (int j = 0; j < 10; j++)//Out put the copied array
+	for (int j = 0; j < Size; j++)//Output the copied array
 	{
 		cout << Copy[j] << " ";
 	}
